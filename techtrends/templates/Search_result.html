@@ -4,10 +4,10 @@
 
     <title>Search Results- TechTrends</title>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 " style="min-height: 100vh; display: flex; flex-direction: column; background-color: #b5ecf3;">
         <h5 style="background-color: #b5ecf3; padding: 2px; margin-bottom: 0; text-align: center"> <strong> Search Results for {{query}}</strong></h5>
-    </div>
-    <div class="container-fluid p-0 ">
+    
+    <div class="container-fluid p-0 product-card  ">
         {% for product in products %}
             <div class="card product-card "><!--product-card style inhereited-->
                 <div class="row g-0">
@@ -44,9 +44,9 @@
                 </div>
             </div>
         {% empty %}<!--runs when the forLoop is empty-->
-            <p>No products available under this name.</p>
+            <h3 class="m-3 text-center">No products available under this name</h3>
         {% endfor %}
     </div>
-
+</div>
 
 {% endblock content %}
